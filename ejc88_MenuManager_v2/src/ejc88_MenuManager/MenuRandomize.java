@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 /**
  * Class MenuRandomize
-	 * author : Everett Cannon
+ * author : Everett Cannon
  * created: 11/1/2022
  */
 
@@ -13,7 +13,7 @@ public class MenuRandomize {
 	private String sideFile;
 	private String saladFile;
 	private String dessertFile;
-	
+
 	public MenuRandomize(String entreeFile, String sideFile, String saladFile, String dessertFile) {
 		this.entreeFile = entreeFile;
 		this.sideFile = sideFile;
@@ -21,9 +21,9 @@ public class MenuRandomize {
 		this.dessertFile = dessertFile;
 	}
 	/**
-	* Method randomMenu
-	* @return Random menu generated
-	*/
+	 * Method randomMenu
+	 * @return Random menu generated
+	 */
 
 	public Menu randomMenu() {
 		ArrayList<String> Entrees= new ArrayList<String>();
@@ -63,8 +63,8 @@ public class MenuRandomize {
 		Dessert dessert = new Dessert(dessertName,dessertDesc,dessertCal);
 
 		Menu menu = new Menu("Random Menu", entree, side, salad, dessert);
-		
+
 		return menu;
-		
+
 	}
 }

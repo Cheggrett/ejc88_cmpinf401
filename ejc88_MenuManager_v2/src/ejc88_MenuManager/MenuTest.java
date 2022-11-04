@@ -1,7 +1,5 @@
 package ejc88_MenuManager;
 
-import java.util.ArrayList;
-
 /**
  * Class MenuTest
  * author : Everett Cannon
@@ -12,13 +10,13 @@ public class MenuTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		MenuRandomize randomize = new MenuRandomize("entrees.txt",
 				"sides.txt","salads.txt","desserts.txt");
-			Menu myMenu = randomize.randomMenu();
-			System.out.println(myMenu.description()+"\nTotal calories"+
-								myMenu.totalCalories());
-		
+		Menu myMenu = randomize.randomMenu();
+		System.out.println(myMenu.description()+"\nTotal calories"+
+				myMenu.totalCalories());
+
 	}
 
 }
