@@ -2,6 +2,11 @@ package ejc88_MenuManager;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+/**
+ * Class MenuRandomize
+	 * author : Everett Cannon
+ * created: 11/1/2022
+ */
 
 public class MenuRandomize {
 	private String entreeFile;
@@ -15,6 +20,11 @@ public class MenuRandomize {
 		this.saladFile = saladFile;
 		this.dessertFile = dessertFile;
 	}
+	/**
+	* Method randomMenu
+	* @return Random menu generated
+	*/
+
 	public Menu randomMenu() {
 		ArrayList<String> Entrees= new ArrayList<String>();
 		ArrayList<String> Sides= new ArrayList<String>();
