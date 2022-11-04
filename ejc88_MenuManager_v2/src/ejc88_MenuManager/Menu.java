@@ -36,7 +36,7 @@ public class Menu {
 	//Methods
 
 	//Sums the total calories 
-	public void totalCalories() {
+	public int totalCalories() {
 		int entreeCal;
 		int saladCal;
 		int sideCal;
@@ -68,38 +68,38 @@ public class Menu {
 			dessertCal= this.dessert.getCalories();
 		}
 		totalCal = entreeCal + saladCal + sideCal + dessertCal;
-		System.out.println("Total Calories: "+totalCal+"\n");
+		return totalCal;
 	}
 
 	//Displays the descriptions of all the menu items
-	public void description() {
-		System.out.println(getName()); 
+	public String description() {
+		String description = getName(); 
 
 		if(entree==null) {
-			System.out.println("Entree: N/A\n");
+			description = description + "\nEntree: N/A\n";
 		}
 		else {
-			System.out.println("Entree: "+this.entree.getName()+". "+this.entree.getDescription()+"\n");
+			description = description + ("\nEntree: "+this.entree.getName()+". "+this.entree.getDescription()+"\n");
 		}
 		if(salad==null) {
-			System.out.println("Salad: N/A\n");
+			description = description + ("Salad: N/A\n");
 		}
 		else {
-			System.out.println("Salad: "+this.salad.getName()+". "+this.salad.getDescription()+"\n");
+			description = description + ("Salad: "+this.salad.getName()+". "+this.salad.getDescription()+"\n");
 		}
 		if(side==null) {
-			System.out.println("Side: N/A\n");
+			description = description + ("Side: N/A\n");
 		}
 		else {
-			System.out.println("Side: "+this.side.getName()+". "+this.side.getDescription()+"\n");
+			description = description + ("Side: "+this.side.getName()+". "+this.side.getDescription()+"\n");
 		}
 		if(dessert==null) {
-			System.out.println("Dessert: N/A\n");
+			description = description +("Dessert: N/A\n");
 		}
 		else {
-			System.out.println("Dessert: "+this.dessert.getName()+". "+this.dessert.getDescription()+"\n");
+			description = description + ("Dessert: "+this.dessert.getName()+". "+this.dessert.getDescription()+"\n");
 		}
-
+		return description;
 	}
 	//Getters and Setters
 	public String getName() {

@@ -1,14 +1,18 @@
 package ejc88_MenuManager;
+
+import java.util.ArrayList;
+
 /**
  * Class MenuTest
  * author : Everett Cannon
  * created: 10/8/2022
  */
+
 public class MenuTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Entree maineLobster = new Entree("Maine Lobster","Wild-caught, fresh from the Atlantic. Prepared to order in the classic style or roasted with crab-and-seafood stuffing. Served with choice of side. Not available for raw purchase.",650);
+		/**Entree maineLobster = new Entree("Maine Lobster","Wild-caught, fresh from the Atlantic. Prepared to order in the classic style or roasted with crab-and-seafood stuffing. Served with choice of side. Not available for raw purchase.",650);
 		Side cheeseBiscuits = new Side("Cheese Biscuits","Our world famous Cheese Biscuits",400);
 		Menu redLobsterSpecials = new Menu("Daily Specials", maineLobster, cheeseBiscuits);
 		Entree filetMignon = new Entree("Filet Mignon","Simply grilled with a peppercorn seasoning. Served with choice of side.",700);
@@ -20,6 +24,14 @@ public class MenuTest {
 		redLobsterSpecials.totalCalories();
 		redLobsterMainMenu.description();
 		redLobsterMainMenu.totalCalories();
+		*/
+		
+		MenuRandomize randomize = new MenuRandomize("entrees.txt",
+				"sides.txt","salads.txt","desserts.txt");
+			Menu myMenu = randomize.randomMenu();
+			System.out.println(myMenu.description()+"\nTotal calories"+
+								myMenu.totalCalories());
+		
 	}
 
 }
