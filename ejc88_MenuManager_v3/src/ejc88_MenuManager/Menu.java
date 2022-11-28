@@ -128,6 +128,7 @@ public class Menu {
 		else {
 			menu = menu + ("Dessert: "+this.dessert.getName()+". "+this.dessert.getDescription()+". "+this.dessert.getCalories()+" Calories "+this.dessert.getPrice()+"$ "+"\n");
 		}
+		menu = menu + ("\nTotal Calories: "+ this.totalCalories()+"\nTotal Price: "+this.totalPrice()+"\n\n");
 		return menu;
 
 	}

@@ -9,7 +9,6 @@ public class MenuManager {
 	private ArrayList<Side> Sides= new ArrayList<Side>();
 	private ArrayList<Salad> Salads= new ArrayList<Salad>();
 	private ArrayList<Dessert> Desserts= new ArrayList<Dessert>();
-	private ArrayList<Menu> Menus= new ArrayList<Menu>();
 	public MenuManager(String filename) {
 		ArrayList<MenuItem> Items= new ArrayList<MenuItem>();
 
@@ -49,7 +48,6 @@ public class MenuManager {
 		int dessertMax = Desserts.size();
 		int dessertNum = (ThreadLocalRandom.current().nextInt(dessertMin, dessertMax));
 		Menu menu = new Menu(name,Entrees.get(entreeNum),Sides.get(sideNum),Salads.get(saladNum),Desserts.get(dessertNum));
-		Menus.add(menu);
 		return menu;
 	}
 	//getters and setters

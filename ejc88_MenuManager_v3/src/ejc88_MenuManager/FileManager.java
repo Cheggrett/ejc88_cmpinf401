@@ -1,8 +1,10 @@
 package ejc88_MenuManager;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 /**
@@ -64,4 +66,23 @@ public class FileManager {
 		}
 		return Items;
 	}
+	
+	public static void writeMenu( String fileName, ArrayList<Menu> menus ) {
+		String itemDataPath = projectPath + "/data/" + fileName;
+		try {
+			FileWriter fw = new FileWriter(itemDataPath);
+			BufferedWriter bw = new BufferedWriter(fw);
+			for (int i =0;i<menus.size();i++) {
+				bw.write((menus.get(i)).menuPrint());
+			}
+			bw.close();
+			fw.close();
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
 }
