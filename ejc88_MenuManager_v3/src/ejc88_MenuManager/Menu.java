@@ -101,6 +101,7 @@ public class Menu {
 		}
 		return description;
 	}
+	//returns the menu as a string
 	public String menuPrint() {
 		String menu = getName(); 
 
@@ -132,7 +133,7 @@ public class Menu {
 		return menu;
 
 	}
-	
+	//sums the price of a menu and returns the total
 	public double totalPrice() {
 		double entreePr;
 		double saladPr;

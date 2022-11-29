@@ -66,7 +66,7 @@ public class FileManager {
 		}
 		return Items;
 	}
-	
+	//writes the array list of menus into a text file
 	public static void writeMenu( String fileName, ArrayList<Menu> menus ) {
 		String itemDataPath = projectPath + "/data/" + fileName;
 		try {

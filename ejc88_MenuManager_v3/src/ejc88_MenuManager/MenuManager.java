@@ -2,6 +2,11 @@ package ejc88_MenuManager;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+/**
+ * Class MenuManager
+ * author : Everett Cannon
+ * created: 11/20/2022
+ */
 
 public class MenuManager {
 	
@@ -9,9 +14,10 @@ public class MenuManager {
 	private ArrayList<Side> Sides= new ArrayList<Side>();
 	private ArrayList<Salad> Salads= new ArrayList<Salad>();
 	private ArrayList<Dessert> Desserts= new ArrayList<Dessert>();
+	//constructor, reads item into an arraylist
 	public MenuManager(String filename) {
 		ArrayList<MenuItem> Items= new ArrayList<MenuItem>();
-
+	
 		Items = FileManager.readItems(filename);
 		int length = Items.size();
 		for(int i=0;i<length;i++) {
@@ -30,6 +36,7 @@ public class MenuManager {
 			}
 		}
 	}
+	//generates a random menu using objects in the array list
 	public Menu randomMenu(String name) {
 		//gets random Entree
 		int entreeMin = 0;

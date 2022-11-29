@@ -1,5 +1,9 @@
 package ejc88_MenuManager;
-
+/**
+ * Class MenuItem
+ * author : Everett Cannon
+ * created: 11/20/2022
+ */
 public class MenuItem {
 
 	//Properties
