@@ -22,12 +22,17 @@ public class Lab10 {
 			printArrayElements(a,index);
 		}
 	}
-	public static void printCombos(int a[],String out, int startIndex, int k) {
-	if(startIndex+k>(a.length)){
-		System.out.println(out);
+	public static void printCombos1(int a[],String out, int startIndex, int k) {
+	if(k<=(a.length)){
+		printCombos2(a,out,startIndex,k);
+		printCombos1(a,out,startIndex,k-1);
 	}
-	else {
-		out=Integer.toString(a[startIndex]);
+	
 	}
-	}
+	public static void printCombos2(int a[],String out, int startIndex, int k) {
+		if(startIndex+k<=(a.length)){
+
+		}
+		
+		}
 }
