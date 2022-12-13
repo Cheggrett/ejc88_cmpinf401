@@ -58,6 +58,72 @@ public class MenuManager {
 		Menu menu = new Menu(name,Entrees.get(entreeNum),Sides.get(sideNum),Salads.get(saladNum),Desserts.get(dessertNum));
 		return menu;
 	}
+	
+	public Menu minCaloriesMenu(String name) {
+		Entree entree = Entrees.get(0);
+		Side side = Sides.get(0);
+		Salad salad = Salads.get(0);
+		Dessert dessert = Desserts.get(0);
+		for(int i=0;i<this.getEntrees().size();i++) {
+			if(Entrees.get(i).getCalories()<entree.getCalories()) {
+				entree = Entrees.get(i);
+			}
+		}
+		
+		for(int i=0;i<this.getSides().size();i++) {
+			if(Sides.get(i).getCalories()<side.getCalories()) {
+				side = Sides.get(i);
+			}
+		}
+		
+		for(int i=0;i<this.getSalads().size();i++) {
+			if(Salads.get(i).getCalories()<salad.getCalories()) {
+				salad = Salads.get(i);
+			}
+		}
+		
+		for(int i=0;i<this.getDesserts().size();i++) {
+			if(Salads.get(i).getCalories()<dessert.getCalories()) {
+				dessert = Desserts.get(i);
+			}
+		}
+		
+		Menu menu = new Menu(name,entree,side,salad,dessert);
+		return menu;
+	}
+	
+	public Menu maxCaloriesMenu(String name) {
+		Entree entree = Entrees.get(0);
+		Side side = Sides.get(0);
+		Salad salad = Salads.get(0);
+		Dessert dessert = Desserts.get(0);
+		for(int i=0;i<this.getEntrees().size();i++) {
+			if(Entrees.get(i).getCalories()>entree.getCalories()) {
+				entree = Entrees.get(i);
+			}
+		}
+		
+		for(int i=0;i<this.getSides().size();i++) {
+			if(Sides.get(i).getCalories()>side.getCalories()) {
+				side = Sides.get(i);
+			}
+		}
+		
+		for(int i=0;i<this.getSalads().size();i++) {
+			if(Salads.get(i).getCalories()>salad.getCalories()) {
+				salad = Salads.get(i);
+			}
+		}
+		
+		for(int i=0;i<this.getDesserts().size();i++) {
+			if(Salads.get(i).getCalories()>dessert.getCalories()) {
+				dessert = Desserts.get(i);
+			}
+		}
+		
+		Menu menu = new Menu(name,entree,side,salad,dessert);
+		return menu;
+	}
 	//getters and setters
 	public ArrayList<Entree> getEntrees() {
 		return Entrees;

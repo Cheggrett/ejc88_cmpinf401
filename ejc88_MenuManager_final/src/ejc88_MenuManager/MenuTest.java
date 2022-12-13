@@ -13,14 +13,8 @@ public class MenuTest {
 		// TODO Auto-generated method stub
 
 	MenuManager menuManager = new MenuManager("dishes.txt");
-	Menu myMenu = menuManager.randomMenu("myMenu");
-
-	Menu myMenu2 = menuManager.randomMenu("myMenu2");
-
-	Menu myMenu3 = menuManager.randomMenu("myMenu3");
-
-	Menu myMenu4 = menuManager.randomMenu("myMenu4");
-	Menu myMenu5 = menuManager.randomMenu("myMenu5");
+	Menu myMenu = menuManager.minCaloriesMenu("Min Cal test");
+	System.out.println(myMenu.totalCalories());
 	
 	
 	FileManager.writeMenu("menutest.txt",menuManager.getMenus());
